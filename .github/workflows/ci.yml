@@ -14,6 +14,8 @@ jobs:
       run: |
         sudo apt update
         sudo apt-get install -y g++-9 autoconf-archive curl zlib1g-dev doxygen
+    - name: Check CMake build languages
+      run: cmake -P cmake/test-build-languages.cmake
     - name: autogen
       run:
         pwd
